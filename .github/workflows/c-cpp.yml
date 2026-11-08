@@ -6,6 +6,8 @@ on:
   pull_request:
     branches: [ "main", "master" ]
 
+workflow_dispatch:
+
 jobs:
   build:
-    uses: geode-sdk/geode/.github/workflows/build.yml@v2
+    uses: geode-sdk/geode/.github/workflows/build.yml@v3
