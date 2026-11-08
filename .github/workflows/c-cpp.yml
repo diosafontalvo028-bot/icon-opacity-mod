@@ -1,4 +1,4 @@
-name: Build Geode Mod
+name: Build Mod
 
 on:
   push:
@@ -9,4 +9,9 @@ on:
 
 jobs:
   build:
-    uses: geode-sdk/geode/.github/workflows/build.yml@v3
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build with Geode CLI
+        uses: geode-sdk/build-geode-mod@main
